@@ -305,7 +305,7 @@ roleDropdown.querySelectorAll('ul li a').forEach(a =>{
       });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
-
+console.log("data after add",data);
       createUserCard(data.id || Date.now(), data.name || name, data.job || job);
       userForm.reset();
       userForm.classList.add("hidden");
@@ -423,4 +423,5 @@ roleDropdown.querySelectorAll('ul li a').forEach(a =>{
 
  </script> 
 </body>
+
 </html>
