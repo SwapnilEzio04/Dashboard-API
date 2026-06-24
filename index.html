@@ -249,7 +249,7 @@ roleDropdown.querySelectorAll('ul li a').forEach(a =>{
   async function loadExistingUsers() {
     try {
       const res = await fetch("https://reqres.in/api/users?page=1", {
-        headers: { "x-api-key": "reqres-free-v1" }
+        headers: { "x-api-key": "reqres_4d64f65600b24527ae1589646340dded" }
       });
       if (!res.ok) throw new Error(`HTTP Error! status: ${res.status}`);
       const data = await res.json();
@@ -359,7 +359,7 @@ console.log("data after add",data);
     card.querySelector(".details-btn").addEventListener("click", async () => {
       try {
         const res = await fetch(`https://reqres.in/api/users/${id}`, {
-          headers: { "x-api-key": "reqres-free-v1" }
+          headers: { "x-api-key": "reqres_4d64f65600b24527ae1589646340dded" }
         });
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
@@ -385,7 +385,7 @@ console.log("data after add",data);
       try {
         const res = await fetch(`https://reqres.in/api/users/${id}`, {
           method: "DELETE",
-          headers: { "x-api-key": "reqres-free-v1" }
+          headers: { "x-api-key": "reqres_4d64f65600b24527ae1589646340dded" }
         });
         if (res.ok) {
           anime({
